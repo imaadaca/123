@@ -73,17 +73,23 @@ function PureChatHeader({
             selectedVisibilityType={selectedVisibilityType}
             className=""
           />
+          <span className="text-sm text-muted-foreground hidden md:block">
+            Help us build our own model
+          </span>
           <Button
             variant="default"
             className="h-[34px] px-4"
             onClick={() => {
-              if (isSignedIn) {
-                // User is signed in, proceed to payment
-                window.open('https://rzp.io/rzp/n0ZRvIF', '_blank');
-              } else {
-                // User is not signed in, redirect to signup
-                router.push('/register');
-              }
+              window.open('https://razorpay.me/@numlink', '_blank');
+            }}
+          >
+            Donate
+          </Button>
+          <Button
+            variant="outline"
+            className="h-[34px] px-4"
+            onClick={() => {
+              window.open('https://bran.numlink.net/upgrade', '_blank');
             }}
           >
             Upgrade
